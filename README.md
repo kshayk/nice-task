@@ -8,18 +8,16 @@
 
     Description:
 You've been provided with JavaScript file **fetch-process-display.js** which has a set of functions: **fetchData**, **processData**, **displayData**
-that simulate asynchronous data fetching, processing, and display. Function **fetchProcessAndDisplayData** wraps all the functions above and executes them in predefined order.
+that simulate asynchronous data fetching, processing, and display. There is also a piece of code that runs those functions in predefined order.
+You can just run the **fetch-process-display.js** script to see its output.
 Your task is to identify problems with the given code and refactor it according to best practices of asynchronous programming in JavaScript.
-The provided code is intentionally free from bugs to avoid the need for bug identification or fixing.
-During the refactoring process, your main objective is to improve the structure and design of the code.
+During the refactoring process, your main objective is to improve the structure and readability of the code.
 
     Tasks:
 1. Identify the issues presented in the **fetch-process-display.js** file - name as much as possible.
 2. Refactor the code
-3. Ensure the refactored code retains the same functionality - function **fetchProcessAndDisplayData** should produce the same output to the console
+3. Ensure the refactored code retains the same functionality - execution of the script should produce the same output to the console
 
-As you refactor the code, it's highly encouraged to write comprehensive unit tests to ensure the functionality and reliability of the newly refactored code.
-Use **fetch-process-display.test.js** test file for your convenience.
 
     Quick setup
 1. Clone the repository and open the **nice-candidate-assignment** project in your IDE
