@@ -31,19 +31,18 @@ function displayData(processedData) {
     console.log(processedData.concat(" - Displayed"));
 }
 
-function fetchProcessAndDisplayData() {
-    fetchData((error, data) => {
-        if (error)
-            console.error(error.message);
-        else {
-            processData(data, (error, processedData) => {
-                if (error)
-                    console.error(error.message);
-                else {
-                    displayData(processedData);
-                }
-            });
-        }
-    });
-}
+fetchData((error, data) => {
+    if (error)
+        console.error(error.message);
+    else {
+        processData(data, (error, processedData) => {
+            if (error)
+                console.error(error.message);
+            else {
+                displayData(processedData);
+            }
+        });
+    }
+});
+
 
