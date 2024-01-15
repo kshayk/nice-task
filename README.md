@@ -18,6 +18,7 @@ During the refactoring process, your main objective is to improve the structure 
 2. Refactor the code
 3. Ensure the refactored code retains the same functionality - execution of the script should produce the same output to the console
 
+&nbsp;
 
     Quick setup
 1. Clone the repository and open the **nice-candidate-assignment** project in your IDE
