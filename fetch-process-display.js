@@ -2,28 +2,30 @@
  *      Task 1: Code Refactoring
  */
 
-function fetchData(callback) {
+function fetchData() {
     // Simulating asynchronous data fetching
-    setTimeout(() => {
-        try {
-            const data = 'Data - Fetched';
-            callback(null, data);
-        } catch (error) {
-            callback(error, null);
-        }
-    }, 1000);
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            try {
+                resolve('Data - Fetched');
+            } catch (error) {
+                reject(error);
+            }
+        }, 1000);
+    })
 }
 
-function processData(data, callback) {
+function processData(data) {
     // Simulating data processing
-    setTimeout(() => {
-        try {
-            const processedData = data.concat(" - Processed");
-            callback(null, processedData);
-        } catch (error) {
-            callback(error, null);
-        }
-    }, 1000);
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            try {
+                resolve(data.concat(" - Processed"));
+            } catch (error) {
+                reject(error);
+            }
+        }, 1000);
+    })
 }
 
 function displayData(processedData) {
@@ -31,18 +33,10 @@ function displayData(processedData) {
     console.log(processedData.concat(" - Displayed"));
 }
 
-fetchData((error, data) => {
-    if (error)
-        console.error(error.message);
-    else {
-        processData(data, (error, processedData) => {
-            if (error)
-                console.error(error.message);
-            else {
-                displayData(processedData);
-            }
-        });
-    }
+fetchData().then(processData).then(result => {
+    displayData(result);
+}).catch(err => {
+    console.error(err)
 });
 
 

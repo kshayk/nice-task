@@ -14,6 +14,13 @@ function task3() {
     return Promise.resolve('Task 3 completed successfully');
 }
 
+module.exports.runTasks = async () => {
+    const promiseRes = await Promise.allSettled([task1(), task2(), task3()]);
+    return promiseRes.map(resObject => resObject.status);
+}
+
+
+
 
 
 

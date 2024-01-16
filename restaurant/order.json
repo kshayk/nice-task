@@ -1,0 +1,13 @@
+{
+  "dishes": [
+    {
+      "dish_id":  3,
+      "quantity": 1
+    }
+  ],
+  "special_comments": [
+    "asfsdf",
+    "Sdfsfd"
+  ],
+  "table_number": 4
+}
